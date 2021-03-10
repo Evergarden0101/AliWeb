@@ -30,7 +30,7 @@ jobs:
       - name: 打包
         run: npm run build
 
-      # 上传阿里云
+      # 上传阿里云1
       - name: 发布到阿里云
         uses: easingthemes/ssh-deploy@v2.1.1
         env:
