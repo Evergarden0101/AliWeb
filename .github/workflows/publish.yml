@@ -13,7 +13,7 @@ jobs:
       # 获取源码
       - name: 迁出代码
         # 使用action库  actions/checkout获取源码
-        uses: actions/checkout@master
+        uses: actions/checkout@main
       # 安装Node10
       
       - name: 安装node.js
@@ -35,7 +35,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v2.1.1
         env:
           # 私钥
-          SSH_PRIVATE_KEY: ${{ secrets.ALI_WEB }}
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           # scp参数
           ARGS: "-avz --delete"
           # 源目录
