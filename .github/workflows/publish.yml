@@ -37,7 +37,7 @@ jobs:
           # 私钥
           SSH_PRIVATE_KEY: ${{ secrets.ALI_WEB }}
           # scp参数
-          ARGS: "-avzr --delete"
+          ARGS: "-avz --delete"
           # 源目录
           SOURCE: "dist"
           # 服务器ip：换成你的服务器IP
