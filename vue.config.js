@@ -8,6 +8,7 @@ module.exports = {
       },
     },
   },
+  publicPath: "/",
   devServer: {
     //host: '8.131.98.76',
     // proxy: {
