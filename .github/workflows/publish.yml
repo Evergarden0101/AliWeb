@@ -1,4 +1,4 @@
-name: 打包应用并上传阿里云
+name: 打包应用并部署
 
 on:
   push:
@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       # 获取源码
-      - name: 迁出代码
+      - name: 获取代码
         # 使用action库  actions/checkout获取源码
         uses: actions/checkout@main
       # 安装Node10
       
-      - name: 安装node.js
+      - name: 安装node
         # 使用action库  actions/setup-node安装node
         uses: actions/setup-node@v1
         with:
@@ -27,11 +27,11 @@ jobs:
         run: npm install
 
       # 打包
-      - name: 打包
+      - name: 项目打包
         run: npm run build
 
       # 上传阿里云1
-      - name: 发布到阿里云
+      - name: 发布到服务器
         uses: easingthemes/ssh-deploy@v2.1.1
         env:
           # 私钥

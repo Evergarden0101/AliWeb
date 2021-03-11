@@ -9,7 +9,7 @@ module.exports = {
     },
   },
   devServer: {
-    host: '8.131.98.76',
+    //host: '8.131.98.76',
     // proxy: {
     //   "/app": {
     //     target: "8.131.98.76",
