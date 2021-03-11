@@ -12,10 +12,10 @@ const routes = [
     name: "About",
     component: () => import("../views/About.vue"),
   },
-  {
-    path: "*",
-    component: NotFoundComponent,
-  },
+  // {
+  //   path: "*",
+  //   component: NotFoundComponent,
+  // },
 ];
 
 const router = createRouter({
